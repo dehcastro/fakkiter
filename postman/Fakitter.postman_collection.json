@@ -1,0 +1,397 @@
+{
+	"info": {
+		"_postman_id": "2a2137c4-7d3b-4c2f-b8c5-7aca6a47dd9b",
+		"name": "Fakitter",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20932782"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Me",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Referer",
+								"value": ""
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 12_4_0) AppleWebKit/537.36 (KHTML, like Gecko) ReactNativeDebugger/0.12.1 Chrome/87.0.4280.141 Electron/11.4.6 Safari/537.36"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "brunnohofmann@hotmail.com",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "brunnohofmann",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://stark-falls-35563.herokuapp.com/api/users/me",
+							"protocol": "https",
+							"host": [
+								"stark-falls-35563",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"users",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Referer",
+								"value": ""
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 12_4_0) AppleWebKit/537.36 (KHTML, like Gecko) ReactNativeDebugger/0.12.1 Chrome/87.0.4280.141 Electron/11.4.6 Safari/537.36"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "identifier",
+									"value": "brunnohofmann@hotmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://stark-falls-35563.herokuapp.com/api/auth/local",
+							"protocol": "https",
+							"host": [
+								"stark-falls-35563",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"auth",
+								"local"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Referer",
+								"value": ""
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 12_4_0) AppleWebKit/537.36 (KHTML, like Gecko) ReactNativeDebugger/0.12.1 Chrome/87.0.4280.141 Electron/11.4.6 Safari/537.36"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "eduardocampor@hotmail.com",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "eduardocampos",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Eduardo Campos",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://stark-falls-35563.herokuapp.com/api/auth/local/register",
+							"protocol": "https",
+							"host": [
+								"stark-falls-35563",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"auth",
+								"local",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get Fakitters",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Referer",
+						"value": ""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 12_4_0) AppleWebKit/537.36 (KHTML, like Gecko) ReactNativeDebugger/0.12.1 Chrome/87.0.4280.141 Electron/11.4.6 Safari/537.36"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "brunnohofmann@hotmail.com",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "brunnohofmann",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://stark-falls-35563.herokuapp.com/api/fakitters?populate=*&sort=createdAt:desc&pagination[page]=1&pagination[pageSize]=10",
+					"protocol": "https",
+					"host": [
+						"stark-falls-35563",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"fakitters"
+					],
+					"query": [
+						{
+							"key": "populate",
+							"value": "*"
+						},
+						{
+							"key": "sort",
+							"value": "createdAt:desc"
+						},
+						{
+							"key": "pagination[page]",
+							"value": "1"
+						},
+						{
+							"key": "pagination[pageSize]",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Fakitter",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Referer",
+						"value": ""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 12_4_0) AppleWebKit/537.36 (KHTML, like Gecko) ReactNativeDebugger/0.12.1 Chrome/87.0.4280.141 Electron/11.4.6 Safari/537.36"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": {\n        \"text\": \"testando\",\n        \"user\": 1\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://stark-falls-35563.herokuapp.com/api/fakitters",
+					"protocol": "https",
+					"host": [
+						"stark-falls-35563",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"fakitters"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get My Fakitters",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjYwODQ0Nzg3LCJleHAiOjE2NjM0MzY3ODd9.4mcOF_Hnm1d0705M1zKFbJRzl1O-YPZ8Z6-rFjC6EmY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Referer",
+						"value": ""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 12_4_0) AppleWebKit/537.36 (KHTML, like Gecko) ReactNativeDebugger/0.12.1 Chrome/87.0.4280.141 Electron/11.4.6 Safari/537.36"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "brunnohofmann@hotmail.com",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "brunnohofmann",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://stark-falls-35563.herokuapp.com/api/fakitters?populate=*&sort=createdAt:desc&pagination[page]=1&pagination[pageSize]=10&filters[user][id][$eq]=1",
+					"protocol": "https",
+					"host": [
+						"stark-falls-35563",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"fakitters"
+					],
+					"query": [
+						{
+							"key": "populate",
+							"value": "*"
+						},
+						{
+							"key": "sort",
+							"value": "createdAt:desc"
+						},
+						{
+							"key": "pagination[page]",
+							"value": "1"
+						},
+						{
+							"key": "pagination[pageSize]",
+							"value": "10"
+						},
+						{
+							"key": "filters[user][id][$eq]",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
