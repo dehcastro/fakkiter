@@ -1,15 +1,22 @@
 import React from 'react';
-import { useColorScheme } from 'react-native';
+import { StatusBar, useColorScheme } from 'react-native';
 import { ThemeProvider } from 'styled-components';
 
 import { theme } from './src/global/styles/theme';
 
-import { Home } from './src/screens/Home';
+import { SignUp } from './src/screens/SignUp';
 
 export default function App() {
   return (
     <ThemeProvider theme={theme[useColorScheme() || 'light']}>
-      <Home />
+      <SignUp />
+      <StatusBar
+        barStyle={
+          useColorScheme() === 'dark' ? 'light-content' : 'dark-content'
+        }
+        translucent
+        backgroundColor="transparent"
+      />
     </ThemeProvider>
   );
 }
