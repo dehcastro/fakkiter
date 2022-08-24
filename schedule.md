@@ -19,12 +19,12 @@
 [x] ActivityIndicator
 [x] Async Storage
 [x] Context API
-[] Trabalhando com Navegação
-[] Tipos de navegadores
-[] Versão 4 vs Versão Atual
-[] Como navegar entre telas
+[x] Trabalhando com Navegação
+[x] Tipos de navegadores
+[x] Como navegar entre telas
+[x] Como montar os navegadores
 [] Como mudar propriedades
-[] Como montar os navegadores
+[] Versão 4 vs Versão Atual
 [] Trabalhando com Flatlist
 [] Teórico sobre ScrollList/VirtualizedList/SectionList
 [] Loading Infinito
