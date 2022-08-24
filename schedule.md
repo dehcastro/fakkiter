@@ -2,7 +2,7 @@
 
 [x] Apresentação do desafio
 [x] Conceitos Básicos
-[x] Expo vs Init
+[x] Expo vs CLI Init
 [x] Pasta Android vs Pasta IOS
 [x] Android Studio e XCode
 [x] Styled Components e Temas (nativo)
@@ -14,10 +14,11 @@
 
 # DAY 02
 
-[] SafeAreaView
-[] Status Bar
-[] Async Storage
-[] Context API"
+[x] SafeAreaView
+[x] Status Bar
+[x] ActivityIndicator
+[x] Async Storage
+[x] Context API
 [] Trabalhando com Navegação
 [] Tipos de navegadores
 [] Versão 4 vs Versão Atual

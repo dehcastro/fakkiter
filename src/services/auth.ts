@@ -1,4 +1,4 @@
-import {apiConn} from './api';
+import { apiConn } from './api';
 
 export interface User {
   username: string;
@@ -33,7 +33,7 @@ const userMapper = (user: UserAttributesApiResponse): User => {
 export const signInService = async (
   username: string,
   password: string,
-): Promise<{jwt: string; user: User}> => {
+): Promise<{ jwt: string; user: User }> => {
   const response = await apiConn().post<{
     jwt: string;
     user: UserAttributesApiResponse;
@@ -42,7 +42,7 @@ export const signInService = async (
     password,
   });
 
-  return {jwt: response.data.jwt, user: userMapper(response.data.user)};
+  return { jwt: response.data.jwt, user: userMapper(response.data.user) };
 };
 
 type registerParams = {

@@ -1,14 +1,25 @@
 import React from 'react';
-import { useColorScheme } from 'react-native';
+import 'react-native-gesture-handler';
+import { StatusBar, useColorScheme } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
 import { ThemeProvider } from 'styled-components';
+import { AuthProvider } from './src/context/AuthContext';
 import { theme } from './src/global/styles/theme';
-
-import { SignUp } from './src/screens/SignUp';
+import { AuthRoutes } from './src/routes/auth.routes';
 
 export default function App() {
   return (
-    <ThemeProvider theme={theme[useColorScheme() || 'light']}>
-      <SignUp />
-    </ThemeProvider>
+    <AuthProvider>
+      <ThemeProvider theme={theme[useColorScheme() || 'light']}>
+        <NavigationContainer>
+          <AuthRoutes />
+        </NavigationContainer>
+        <StatusBar
+          barStyle="light-content"
+          backgroundColor="transparent"
+          translucent
+        />
+      </ThemeProvider>
+    </AuthProvider>
   );
 }

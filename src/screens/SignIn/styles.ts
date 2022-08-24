@@ -1,6 +1,5 @@
 import styled from 'styled-components/native';
-
-import GoBackIcon from '../../assets/img/go-back-icon.svg';
+import CreateAccountIcon from '../../assets/img/create-account-icon.svg';
 
 export const Container = styled.SafeAreaView`
   flex: 1;
@@ -18,7 +17,7 @@ export const Form = styled.View`
   padding: 0 40px;
 `;
 
-export const SignInButton = styled.TouchableOpacity`
+export const SignUpButton = styled.TouchableOpacity`
   width: 100%;
   margin-top: 20px;
 
@@ -27,12 +26,14 @@ export const SignInButton = styled.TouchableOpacity`
   justify-content: center;
 `;
 
-export const SignInButtonIcon = styled(GoBackIcon).attrs(({ theme }) => ({
-  fill: theme.secondary.text,
-}))`
+export const SignUpButtonIcon = styled(CreateAccountIcon).attrs(
+  ({ theme }) => ({
+    fill: theme.secondary.text,
+  }),
+)`
   margin-right: 10px;
 `;
 
-export const SignInButtonText = styled.Text`
+export const SignUpButtonText = styled.Text`
   color: ${({ theme }) => theme.secondary.text};
 `;

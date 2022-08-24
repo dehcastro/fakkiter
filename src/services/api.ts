@@ -1,4 +1,4 @@
-import axios, {AxiosInstance} from 'axios';
+import axios, { AxiosInstance } from 'axios';
 
 export const api = axios.create({
   baseURL: 'https://stark-falls-35563.herokuapp.com/api',

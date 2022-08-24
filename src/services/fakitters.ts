@@ -1,6 +1,6 @@
 import qs from 'qs';
-import {apiConn} from './api';
-import {User} from './auth';
+import { apiConn } from './api';
+import { User } from './auth';
 
 export interface Fakitter {
   id: number;
@@ -53,7 +53,7 @@ interface GenericPaginationResponse<T> {
 }
 
 const fakitterMapper = (response: GetFakittersResponse): Fakitter => {
-  const {attributes, id} = response;
+  const { attributes, id } = response;
 
   return {
     text: attributes.text,
@@ -69,7 +69,7 @@ const fakitterMapper = (response: GetFakittersResponse): Fakitter => {
 };
 
 export const getFakittersService = async (): Promise<Fakitter[]> => {
-  const {data} = await apiConn().get<
+  const { data } = await apiConn().get<
     GenericPaginationResponse<GetFakittersResponse>
   >('fakitters', {
     params: {
@@ -84,7 +84,7 @@ export const getFakittersService = async (): Promise<Fakitter[]> => {
 export const getFakittersByUserIdService = async (
   userId: number,
 ): Promise<Fakitter[]> => {
-  const {data} = await apiConn().get<
+  const { data } = await apiConn().get<
     GenericPaginationResponse<GetFakittersResponse>
   >(
     `fakitters?${qs.stringify(
