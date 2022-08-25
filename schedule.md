@@ -25,10 +25,10 @@
 [x] Como montar os navegadores
 [] Como mudar propriedades
 [] Versão 4 vs Versão Atual
-[] Trabalhando com Flatlist
-[] Teórico sobre ScrollList/VirtualizedList/SectionList
-[] Loading Infinito
-[] Flatlist horizontal
+[x] Trabalhando com Flatlist
+[x] Teórico sobre ScrollList/VirtualizedList/SectionList
+[x] Loading Infinito
+[x] Flatlist horizontal
 
 [] Push Notification
 [] Troca do Ícone
