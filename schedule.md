@@ -23,14 +23,17 @@
 [x] Tipos de navegadores
 [x] Como navegar entre telas
 [x] Como montar os navegadores
-[] Como mudar propriedades
-[] Versão 4 vs Versão Atual
+
+# DAY 03
+
 [x] Trabalhando com Flatlist
 [x] Teórico sobre ScrollList/VirtualizedList/SectionList
 [x] Loading Infinito
 [x] Flatlist horizontal
+[x] Formulários
+[x] - react-hook-form
+
+# DAY 04
 
 [] Push Notification
 [] Troca do Ícone
-[] Formulários
-[] - react-hook-form
