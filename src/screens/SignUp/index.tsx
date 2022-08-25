@@ -54,7 +54,7 @@ export const SignUp = () => {
         Alert.alert('Tudo Certo!', 'Seu cadastro foi feito com sucesso', [
           {
             text: 'Ir para login',
-            onPress: () => navigation.navigate('SignIn' as never),
+            onPress: () => navigation.navigate('SignIn'),
           },
         ]);
       } catch {
@@ -126,7 +126,7 @@ export const SignUp = () => {
             onPress={handleSubmit(handleSignUp)}
           />
 
-          <SignInButton onPress={() => navigation.navigate('SignIn' as never)}>
+          <SignInButton onPress={() => navigation.navigate('SignIn')}>
             <SignInButtonIcon />
             <SignInButtonText>Voltar</SignInButtonText>
           </SignInButton>

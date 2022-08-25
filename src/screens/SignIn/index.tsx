@@ -69,7 +69,7 @@ export const SignIn = () => {
 
           <Button title="Logar" loading={loading} onPress={handleSignIn} />
 
-          <SignUpButton onPress={() => navigation.navigate('SignUp' as never)}>
+          <SignUpButton onPress={() => navigation.navigate('SignUp')}>
             <SignUpButtonIcon />
             <SignUpButtonText>Criar minha conta</SignUpButtonText>
           </SignUpButton>

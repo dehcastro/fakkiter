@@ -3,12 +3,18 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import { Home } from '../screens/Home';
 
-const App = createBottomTabNavigator();
+export type AppScreens = {
+  Home: undefined;
+};
+
+const App = createBottomTabNavigator<AppScreens>();
 
 export const AppRoutes = () => (
-  <App.Navigator  screenOptions={{
-          headerShown: false,
-      }}>
+  <App.Navigator
+    initialRouteName="Home"
+    screenOptions={{
+      headerShown: false,
+    }}>
     <App.Screen name="Home" component={Home} />
   </App.Navigator>
 );
