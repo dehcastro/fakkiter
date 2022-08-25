@@ -29,3 +29,8 @@
 [] Teórico sobre ScrollList/VirtualizedList/SectionList
 [] Loading Infinito
 [] Flatlist horizontal
+
+[] Push Notification
+[] Troca do Ícone
+[] Formulários
+[] - react-hook-form

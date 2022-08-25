@@ -5,14 +5,14 @@ import { NavigationContainer } from '@react-navigation/native';
 import { ThemeProvider } from 'styled-components';
 import { AuthProvider } from './src/context/AuthContext';
 import { theme } from './src/global/styles/theme';
-import { AuthRoutes } from './src/routes/auth.routes';
+import { Routes } from './src/routes';
 
 export default function App() {
   return (
     <AuthProvider>
       <ThemeProvider theme={theme[useColorScheme() || 'light']}>
         <NavigationContainer>
-          <AuthRoutes />
+          <Routes />
         </NavigationContainer>
         <StatusBar
           barStyle="light-content"
