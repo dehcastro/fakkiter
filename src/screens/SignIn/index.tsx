@@ -1,5 +1,10 @@
-import React, { useCallback, useState } from 'react';
-import { TouchableWithoutFeedback, Keyboard, Alert } from 'react-native';
+import React, { useCallback, useRef, useState } from 'react';
+import {
+  TouchableWithoutFeedback,
+  Keyboard,
+  Alert,
+  TextInput,
+} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 import FakkiterLogo from '../../assets/img/fakkiter-logo.svg';
@@ -20,6 +25,8 @@ export const SignIn = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
+
+  const passwordInputRef = useRef<TextInput>(null);
 
   const { signIn } = useAuth();
   const navigation = useNavigation();
@@ -56,15 +63,22 @@ export const SignIn = () => {
             placeholder="Email"
             autoCapitalize="none"
             keyboardType="default"
+            returnKeyType="next"
+            onSubmitEditing={() => {
+              passwordInputRef.current?.focus();
+            }}
           />
 
           <Input
+            ref={passwordInputRef}
             value={password}
             onChangeText={setPassword}
             placeholder="Password"
             autoCapitalize="none"
             keyboardType="default"
+            returnKeyType="send"
             secureTextEntry
+            onSubmitEditing={handleSignIn}
           />
 
           <Button title="Logar" loading={loading} onPress={handleSignIn} />

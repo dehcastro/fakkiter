@@ -32,8 +32,10 @@
 [x] Flatlist horizontal
 [x] Formulários
 [x] - react-hook-form
+[x] Focando no próximo input
 
 # DAY 04
 
 [] Push Notification
 [] Troca do Ícone
+[] CI/CD
